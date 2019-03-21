@@ -1,14 +1,21 @@
 /*  Oswald  fonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 /*
-*Project Name: Home
-*Project author:
-*project keyword:
-*project description:
-version:
+*Project Name: Meipaly
+*Project author: Shakil
+*project keyword: HTML,CSS,HTML Templete,CSS Templete,HTML CSS Template
+*project description:Free Templete
+version:1.0
 *All section
 1.Header
 2.Banner
+3.Service
+4.About
+5.Protfolio
+6.Blog
+7.Contact
+8.Counter
+9.Trusted
 */
 
 
@@ -123,9 +130,7 @@ header{
 }
 
 .prev {
-
     left: 30px;
-
 }
 .prev, .next {
 
@@ -349,6 +354,12 @@ header{
 .welcome-se-img img:hover{
     border: 5px solid #e62b4a;
 }
+.great {
+    padding: 60px 0px;
+}
+.great-paragrap {
+    padding: 0px 20px;
+}
 /*=======================
  welcome css end
 --=======================*/
@@ -397,7 +408,7 @@ header{
   text-transform: uppercase;
   font-family: 'Oswald';
   color: #8b8b8b;
-display: inline;
+    display: inline;
 }
 .work-down-text{
   padding: 50px 0px 0px 0px;
