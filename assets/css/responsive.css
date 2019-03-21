@@ -131,6 +131,9 @@
     .great-paragrap {
         padding: 0px 22px;
     }
+    .team-icon {
+        transform: translate(-117%, -100%);
+    }
     .blog-flex {
         flex-direction: column;
         align-items: center;
