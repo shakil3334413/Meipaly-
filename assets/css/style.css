@@ -78,6 +78,67 @@ header{
     background:#393939;
     padding: 32px 0px;
     border-bottom: 1px solid #c0bec0;
+    position: sticky;
+    top: 0;
+    z-index:99;
+}
+.overlay {
+  height: 100px;
+  width: 0;
+  position: fixed;
+  z-index:99999;
+  top: 0;
+  left: 0;
+  background-color:#393939;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+.toggle-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle-nav ul li{
+    padding-left:30px;    
+}
+#myNav .toggle-nav ul li.active > a {
+	text-decoration: underline;
+    background: #000000;
+    padding: 10px;
+    border-radius: 25%;
+}
+.toggle-nav ul li a{
+    color:#ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Oswald';
+    font-weight: 500;       
+}
+.overlay a {
+  text-decoration: none;
+  font-size: 60px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  font-size: 60px;
 }
 .container-fluid{
     padding: 0px 56px;
@@ -86,6 +147,9 @@ header{
     display: flex;
     justify-content: space-between;
 }
+#topheader .singel-header ul li.active > a {
+	text-decoration: underline;
+}
 .singel-header ul{
     display: flex;
 }
@@ -93,7 +157,7 @@ header{
     padding-left: 25px;
 }
 .singel-header ul li a{
-    color:#c0bec0;
+    color:#ffffff;
     text-transform: uppercase;
     font-size: 14px;
     font-family: 'Oswald';
@@ -102,13 +166,26 @@ header{
 .menu-icon ul{
   display: flex;
 }
-.menu-icon ul li a{
-    font-size: 15px;
-    color:#c0bec0;
+.menu-icon ul li{
+    padding: 0px 0px 0px 10px;
 }
-.menu-icon ul li a i{
-    padding:0px 0px 0px 12px;
+.menu-icon ul li i{
+    padding: 0px 0px 0px 0px;
+    color: #ffffff;
+    font-size: 20px;
 }
+.header-search{
+    display:none;
+    margin: -10px 10px 0px 0px;
+}
+.search-show{
+    display:inline;
+    padding: 10px 0px 10px 20px;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+
+
 /*=======================
  Header css end
 --=======================*/
@@ -335,24 +412,13 @@ header{
   width: 50%;
     padding: 0px 0px 0px 200px;
 }
-.welcome-fi-img{
-  position: relative;
-}
 .welcome-fi-img img{
-    width: 330px;
+    width: 300px;
     height: 380px;
 }
-.welcome-se-img{
-    position: absolute;
-    margin-top: -300px;
-    margin-left: -50px;
-}
-.welcome-se-img img{
-    width: 330px;
-    height: 350px;
-}
-.welcome-se-img img:hover{
-    border: 5px solid #e62b4a;
+.welcome-fi-img img:hover{
+    outline:3px solid #e62b4a;
+    outline-offset: 8px;
 }
 .great {
     padding: 60px 0px;
@@ -461,7 +527,7 @@ header{
     cursor: pointer;
     height: 320px;
     width: 300px;
-    padding: 0px 5px;
+    padding: 0px 0px;
 }
 .portfolio-img:hover{
     background-color:#392b39;
@@ -470,7 +536,7 @@ header{
   display: block;
   width: 100%;
   height: 320px;
-  transition: .5s ease;
+  transition:.5s ease;
   backface-visibility: hidden;
   cursor: pointer;
 }
@@ -622,15 +688,31 @@ position: relative;
 .team-profile{
     position: relative;
     cursor: pointer;
+    width: 255px;
+    height: 310px;
+}
+.team-profile:hover{
+    background-color:#392b39;
+    opacity: 0.7;
 }
 .team-img{
     display: block;
     width: 100%;
-    height: 250px;
+    height: 310px;
     transition: .5s ease;
     backface-visibility: hidden;
     cursor: pointer;
     
+}
+.team-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .team-icon{
   transition: .5s ease;
@@ -641,9 +723,6 @@ position: relative;
   transform: translate(-140%, -120%);
   color: white;
 }
-.team-profile:hover{
-    background-color:red;
-}
 .team-profile:hover .team-img{
     opacity: 0.2;
 }
@@ -652,11 +731,11 @@ position: relative;
 
 }
   .team-icon p{
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
     font-size: 12px;
     font-family:'Oswald';
-      
+    font-weight: 800;
   }
 .team-intro{
     padding: 0px 0px 0px 0px;
@@ -688,15 +767,24 @@ position: relative;
     background: #f4f4f4;
     padding: 100px 0px;
 }
+.client-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .client-item{
-    width: 200px;
+    width:  200px;
     height: 150px;
-    background: #ffffff;
-    position: relative;
+    
+}
+.client-item img{
+    width:  200px;
+    height: 150px;
     margin: 10px;
 }
-.client-item:hover{
-    border-right: 2px solid #e62b4a;
+.client-item img:hover{
+    border-right: 3px solid #e62b4a;
+    border-top: 2px solid #e62b4a;
 }
 /*=======================
  clients css end

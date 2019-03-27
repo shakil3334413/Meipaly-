@@ -23,62 +23,82 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!--  responsive css  -->
     <link rel="stylesheet" href="assets/css/responsive.css">
-    
+    <style>
+
+    </style>
 </head>
 <body>
-<header class="wow pulse" data-wow-duration="1s" data-wow-delay=""><!--  header start   -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <nav class="toggle-nav">
+        <ul>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#client">Client</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+  </div>
+</div>
+<header class="wow fadeInLeft"  data-wow-delay="1s" id="topheader"><!--  header start   -->
       <div class="container-fluid"><!--  container-fluid start   -->
           <div class="header-flex"><!--  header-flex start   -->
               <div class="logo">
-                  <img src="assets/images/logo.png" alt="">
+                  <a href="#home"><img src="assets/images/logo.png" alt=""></a>
               </div>
               <div class="header-menu"><!--  header-menu start   -->
                   <nav class="singel-header">
                       <ul>
-                          <li><a href="">Home</a></li>
-                          <li><a href="">About</a></li>
-                          <li><a href="">Service</a></li>
-                          <li><a href="">Portfolio</a></li>
-                          <li><a href="">Blog</a></li>
-                          <li><a href="">Contact</a></li>
+                          <li class="active"><a href="#home">Home</a></li>
+                          <li><a href="#service">Service</a></li>
+                          <li><a href="#portfolio">Portfolio</a></li>
+                          <li><a href="#team">Team</a></li>
+                          <li><a href="#client">Client</a></li>
+                          <li><a href="#blog">Blog</a></li>
+                          <li><a href="#contact">Contact</a></li>
                       </ul>
                   </nav>
               </div><!--  header-menu end   -->
               <div class="header-icon"><!--  header-icon start   -->
                   <nav class="menu-icon">
-                      <ul>
-                          <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                          <li><a href=""><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                      <ul>  
+                             <li><input type="search" class="header-search" placeholder="Search...."></li>  
+                          <li><i class="fa fa-search search" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i></li>
                       </ul>
                   </nav>
               </div><!--  header-icon start   -->
           </div><!--  header-flex end   -->
       </div><!--  container-fluid end   -->
 </header><!--  header end   -->
-<section class="slider wow rollIn" data-wow-duration="2s" data-wow-delay="" ><!--  slider section start   -->
+<section class="slider wow fadeInDown" data-wow-duration="" id="home" ><!--  slider section start   -->
     <div class="owl-carousel owl-theme banner-carousel"><!--  banner-carousel start   -->
-        <div class="item slider-text wow bounceInUp" data-wow-duration="2s" data-wow-delay="2s"><!--  item start   -->
+        <div class="item slider-text" data-wow-duration="2s" data-wow-delay="2s"><!--  item start   -->
             <p>welcome to meipaly agency</p>
             <h1>Smart Web Design Agency.</h1>
             <button type="button" name="button"><a href="#" class="btn">Discover More</a></button>
         </div><!--  item end   -->
-        <div class="item slider-text slider-text wow bounceInUp" data-wow-duration="2s" data-wow-delay="2s"><!--  item start   -->
+        <div class="item slider-text slider-text" data-wow-duration="2s" data-wow-delay="2s"><!--  item start   -->
             <p>welcome to meipaly agency</p>
             <h1>Smart Web Development Agency.</h1>
             <button type="button" name="button"><a href="#" class="btn">Discover More</a></button>
         </div><!--  item end   -->
     </div><!--  banner-carousel end   -->
 </section><!--  slider section end   -->
-<section class="service"><!--  service section start   -->
+<section class="service" id="service"><!--  service section start   -->
   <div class="container"><!--  container start   -->
-    <div class="service-text wow "><!--  service-text start   -->
-      <h4 class="wow bounceInDown" data-wow-delay="1s">Services we are offering</h4>
-      <h1 class="wow bounceInLeft" data-wow-delay="2s">We design digital products that help grow businesses.</h1>
+    <div class="service-text wow fadeInLeft" data-wow-delay="1s"><!--  service-text start   -->
+      <h4>Services we are offering</h4>
+      <h1>We design digital products that help grow businesses.</h1>
       <div class="service-paragrap">
-        <p class="wow bounceInRight" data-wow-delay="1s">We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
+        <p>We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
       </div>
     </div><!--  service-text end   -->
-    <div class="service-flex wow fadeInUpBig"><!--  service-flex start   -->
+    <div class="service-flex wow fadeInUp" data-wow-delay="1s"><!--  service-flex start   -->
       <div class="service-item"><!--  service-item start   -->
         <div class="service-item-text">
           <img src="assets/images/service1.png" alt="">
@@ -112,23 +132,20 @@
     </div><!--  service-flex end   -->
   </div><!--  container end   -->
 </section><!--  service section end   -->
-<section class="welcome"><!--  welcome section start   -->
+<section class="welcome" id="about"><!--  welcome section start   -->
     <div class="container"><!--  container start   -->
         <div class="welcome-flex"><!--  welcome-flex start   -->
             <div class="welcome-left"><!--  welcome-left start   -->
-                <div class="welcome-left-text wow slideInLeft">
+                <div class="welcome-left-text wow fadeInLeft" data-wow-delay="1s">
                     <h5>welcom to smart meipaly web agency</h5>
                     <h1>We are the Best Website agency in The World</h1>
                     <p>We are committed to providing our customers with exceptional service while offering our employees the best training. Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the 1500s.</p>
                     <button type="button" name="button"><a href="#" class="btn welcome-btn">Learn More</a></button>
                 </div>
             </div><!--  welcome-left end   -->
-            <div class="welcome-right wow lightSpeedIn"><!--  welcome-right start   -->
+            <div class="welcome-right wow fadeInRight" data-wow-delay="1s"><!--  welcome-right start   -->
                 <div class="welcome-fi-img">
-                  <img src="assets/images/welcome2.png" alt="">
-                </div>
-                <div class="welcome-se-img">
-                  <img src="assets/images/welcome1.png" alt="">
+                  <img src="assets/images/about.jpg" alt="">
                 </div>
             </div><!--  welcome-right end   -->
         </div><!--  welcome-flex end   -->
@@ -136,29 +153,29 @@
 </section><!--  welcome section end   -->
 <section class="work"><!--  work section start   -->
    <div class="container"><!-- container start   -->
-        <div class="section-heading"><!-- section-heading start   -->
-          <h5 class="wow bounceInDown" data-wow-delay="1s">how do we works</h5>
-          <h1 class="wow bounceInLeft" data-wow-delay="2s">Digital Experience</h1>
+        <div class="section-heading wow fadeInDown" data-wow-delay="1s"><!-- section-heading start   -->
+          <h5>how do we works</h5>
+          <h1>Digital Experience</h1>
           <div class="section-paragrap">
-            <p class="wow bounceInRight" data-wow-delay="1s">We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
+            <p>We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
           </div>
         </div><!-- section-heading end   -->
     </div><!-- container end   -->
 </section><!--  work section end   -->
 <section class="work2"><!--  work2 section start   -->
     <div class="container"><!-- container start   -->
-        <div class="work-img wow bounceInUp" data-wow-delay="2s"><!-- work-img start   -->
+        <div class="work-img wow fadeInDown" data-wow-delay="1s"><!-- work-img start   -->
             <div class="work-icon">
               <i class="fa fa-play" aria-hidden="true"></i>
             </div>
         </div><!-- work-img start   -->
         <div class="work-down-text"><!-- work-down-text start   -->
             <div class="work-flex"><!-- work-flex start   -->
-                <div class="work-text-left wow fadeInLeftBig"><!-- work-text-left start   -->
+                <div class="work-text-left wow fadeInLeft" data-wow-delay="1s"><!-- work-text-left start   -->
                       <p>don’t miss out our latest updates</p>
                       <h1>Subscribe us</h1>
                 </div><!-- work-text-left end   -->
-                <div class="work-right wow fadeInRightBig"><!-- work-text-right start   -->
+                <div class="work-right wow fadeInRight" data-wow-delay="1s"><!-- work-text-right start   -->
                     <form class="" action="index.html" method="post">
                         <input type="email" name="" value="" placeholder="Enter Your email" class="wo-email">
                         <input type="submit" name="" value="Subscribe now" class="w-submit">
@@ -168,55 +185,55 @@
         </div><!-- work-down-text end   -->
     </div><!-- container end   -->
 </section><!--  work2 section end   -->
-<section class="protfolio"><!--  protfolio section start   -->
+<section class="protfolio" id="portfolio"><!--  protfolio section start   -->
     <div class="container"><!-- container start   -->
-        <div class="section-heading"><!-- section-heading start   -->
-              <h5 class="wow bounceInDown" data-wow-delay="1s">our portfolio</h5>
-              <h1 class="wow bounceInLeft" data-wow-delay="2s">work showcase</h1>
+        <div class="section-heading wow fadeInUp" data-wow-delay="1s"><!-- section-heading start   -->
+              <h5>our portfolio</h5>
+              <h1>work showcase</h1>
               <div class="section-paragrap">
-                <p class="wow bounceInRight" data-wow-delay="1s">We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
+                <p>We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
               </div>
         </div><!-- section-heading end   -->
-        <div class="protfolio-flex wow slideInDown"><!-- protfolio-flex start   -->
+        <div class="protfolio-flex wow fadeInDown" data-wow-delay="1s"><!-- protfolio-flex start   -->
             <div class="portfolio-img"><!-- protfolio-img start   -->
-                <img src="assets/images/protfolo.png" alt="" class="img">
+                <img src="assets/images/portfolio1(10).jpg" alt="" class="img">
                 <div class="porfolio-text">
                     <h2 class="overly">Graphic</h2>
                     <p class="overl">Design style</p>
                 </div>
             </div><!-- protfolio-img end   -->
             <div class="portfolio-img"><!-- protfolio-img start   -->
-                <img src="assets/images/protfolo.png" alt="" class="img">
+                <img src="assets/images/portfolio1(11).jpg" alt="" class="img">
                 <div class="porfolio-text">
                     <h2 class="overly">Graphic</h2>
                     <p class="overl">Design style</p>
                 </div>
             </div><!-- protfolio-img end   -->
             <div class="portfolio-img"><!-- protfolio-img start   -->
-                <img src="assets/images/protfolo.png" alt="" class="img">
+                <img src="assets/images/portfolio1(6).jpg" alt="" class="img">
                 <div class="porfolio-text">
                       <p class="overly">Graphic</p>
                       <h2 class="overl">Design style</h2>
                 </div>
             </div><!-- protfolio-img end   -->
         </div><!-- protfolio-flex end   -->
-        <div class="protfolio-flex1 wow fadeInUpBig"><!-- protfolio-flex1 start   -->
+        <div class="protfolio-flex1 wow fadeInUp" data-wow-delay="1s"><!-- protfolio-flex1 start   -->
             <div class="portfolio-img"><!-- protfolio-img start   -->
-                <img src="assets/images/protfolo.png" alt="" class="img">
+                <img src="assets/images/portfolio1(7).jpg" alt="" class="img">
                 <div class="porfolio-text">
                     <h2 class="overly">Graphic</h2>
                     <p class="overl">Design style</p>
                 </div>
             </div><!-- protfolio-img end   -->
             <div class="portfolio-img"><!-- protfolio-img start   -->
-                <img src="assets/images/protfolo.png" alt="" class="img">
+                <img src="assets/images/portfolio1(8).jpg" alt="" class="img">
                 <div class="porfolio-text">
                     <h2 class="overly">Graphic</h2>
                     <p class="overl">Design style</p>
                 </div>
             </div><!-- protfolio-img end   -->
             <div class="portfolio-img"><!-- protfolio-img start   -->
-                <img src="assets/images/protfolo.png" alt="" class="img">
+                <img src="assets/images/portfolio1(9).jpg" alt="" class="img">
                 <div class="porfolio-text">
                     <p class="overly">Graphic</p>
                     <h2 class="overl">Design style</h2>
@@ -228,7 +245,7 @@
 <section class="trusted"><!--  trusted section start    -->
     <div class="counter"><!--  counter start    -->
         <div class="container"><!--  container start    -->
-            <div class="counter-flex wow flip"><!--  counter-flex start    -->
+            <div class="counter-flex wow fadeInDown" data-wow-delay="1s"><!--  counter-flex start    -->
                 <div class="counter-item" id="counter">
                   <h1 class="counter-value" data-count="8705">0</h1>
                   <p>Projects Completed</p>
@@ -251,10 +268,10 @@
     <div class="trusted-down"><!--  trusted-down start    -->
         <div class="container"><!--  container start    -->
             <div class="trused-flex"><!--  trused-flex start    -->
-                <div class="trusted-left wow fadeInLeftBig"><!--  trused-left start    -->
-                    <img src="assets/images/trusted.png" alt="">
+                <div class="trusted-left wow fadeInLeft" data-wow-delay="1s"><!--  trused-left start    -->
+                    <img src="assets/images/trusted.jpg" alt="">
                 </div><!--  trused-left end    -->
-                <div class="trusted-right wow fadeInRightBig"><!--  trused-right start    -->
+                <div class="trusted-right wow fadeInRight" data-wow-delay="1s"><!--  trused-right start    -->
                     <h1 class="" data-wow-delay="1s">We are trusted by more than 8900 clients</h1>
                     <p class="" data-wow-delay="1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
                     <button type="button" name="button" class="" data-wow-delay="1s"><a href="#" class="btn welcome-btn">Learn More</a></button>
@@ -263,20 +280,20 @@
         </div><!--  container end    -->
     </div><!--  trusted-down end    -->
 </section><!--  trusted section end    -->
-<section class="team"><!--  team section start    -->
+<section class="team" id="team"><!--  team section start    -->
     <div class="container"><!--  container start    -->
-        <div class="section-heading"><!--  section-heading start    -->
-            <h5 class="wow bounceInDown" data-wow-delay="1s">Meet the team</h5>
-            <h1 class="wow bounceInLeft" data-wow-delay="2s">expert people</h1>
+        <div class="section-heading wow fadeInDown" data-wow-delay="1s"><!--  section-heading start    -->
+            <h5>Meet the team</h5>
+            <h1>expert people</h1>
             <div class="section-paragrap">
-              <p class="wow bounceInRight" data-wow-delay="1s">We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
+              <p>We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
             </div>
         </div><!--  section-heading start    -->
     </div><!--  container end    -->
-    <div class="owl-carousel owl-theme team-owl wow lightSpeedIn"><!--  owl-carousel start    -->
-        <div class="item"><!--  item start    -->
+    <div class="owl-carousel owl-theme team-owl wow fadeInUp" data-wow-delay="1s"><!--  owl-carousel start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-                <img src="assets/images/team.png" alt="" class="tema-img">
+                <img src="assets/images/team.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -288,9 +305,9 @@
                 <p>Co founder</p>
             </div>
         </div><!--  item end    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-              <img src="assets/images/team.png" alt="" class="tema-img">
+              <img src="assets/images/team8.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -302,9 +319,9 @@
                 <p>General Manager</p>
             </div>
         </div><!--  item end    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-                <img src="assets/images/team.png" alt="" class="tema-img">
+                <img src="assets/images/team2.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -316,9 +333,9 @@
                 <p>Senior Designer</p>
             </div>
         </div><!--  item end    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-                <img src="assets/images/team.png" alt="" class="tema-img">
+                <img src="assets/images/team3.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -330,9 +347,9 @@
                 <p>Marketing manager</p>
             </div>
         </div><!--  item end    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-                <img src="assets/images/team.png" alt="" class="tema-img">
+                <img src="assets/images/team4.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -344,9 +361,9 @@
                 <p>Brand Officer</p>
             </div>
         </div><!--  item start    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-                <img src="assets/images/team.png" alt="" class="tema-img">
+                <img src="assets/images/team5.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -358,9 +375,9 @@
                 <p>Co founder</p>
             </div>
         </div><!--  item end    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-              <img src="assets/images/team.png" alt="" class="tema-img">
+              <img src="assets/images/team6.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -372,9 +389,9 @@
                 <p>General Manager</p>
             </div>
         </div><!--  item end    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-                <img src="assets/images/team.png" alt="" class="tema-img">
+                <img src="assets/images/team7.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -386,9 +403,9 @@
                 <p>Senior Designer</p>
             </div>
         </div><!--  item end    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-                <img src="assets/images/team.png" alt="" class="tema-img">
+                <img src="assets/images/team8.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -400,9 +417,9 @@
                 <p>Marketing manager</p>
             </div>
         </div><!--  item end    -->
-        <div class="item"><!--  item start    -->
+        <div class="item team-content"><!--  item start    -->
             <div class="team-profile">
-                <img src="assets/images/team.png" alt="" class="tema-img">
+                <img src="assets/images/team5.jpg" alt="" class="tema-img">
                 <div class="team-icon">
                     <p>Twitter</p>
                     <p>Facebook</p>
@@ -416,29 +433,57 @@
         </div><!--  item start    -->
     </div><!--  owl-carousel end    -->
 </section><!--  team section end    -->
-<section class="client"><!--  client section start    -->
+<section class="client" id="client"><!--  client section start    -->
     <div class="container"><!--   container start    -->
-       <div class="section-heading"><!--   section-heading start    -->
-            <h5 class="wow bounceInDown" data-wow-delay="1s">our cleints</h5>
-            <h1 class="wow bounceInLeft" data-wow-delay="2s">They trusted us</h1>
+       <div class="section-heading wow fadeInDown" data-wow-delay="1s"><!--   section-heading start    -->
+            <h5>our cleints</h5>
+            <h1>They trusted us</h1>
             <div class="section-paragrap">
-              <p class="wow bounceInRight" data-wow-delay="1s">We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
+              <p>We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
             </div>
         </div><!--   section-heading end    -->
-        <div class="owl-carousel owl-theme client-carousel wow flip"><!-- owl-carousel start    -->
-            <div class="item client-item"></div>
-            <div class="item client-item"></div>
-            <div class="item client-item"></div>
-            <div class="item client-item"></div>
-            <div class="item client-item"></div>
-            <div class="item client-item"></div>
-            <div class="item client-item"></div>
+        <div class="owl-carousel owl-theme client-carousel wow fadeInUp" data-wow-delay="1s"><!-- owl-carousel start    -->
+            <div class="item client-content">
+                <div class="client-item">
+                    <img src="assets/images/clients(1).png" alt="">
+                </div>
+            </div>
+            <div class="item client-content">
+                <div class="client-item">
+                    <img src="assets/images/clients(2).png" alt="">
+                </div>
+            </div>
+            <div class="item client-content">
+               <div class="client-item">
+                    <img src="assets/images/clients(3).png" alt="">
+                </div>
+            </div>
+            <div class="item client-content">
+                <div class="client-item">
+                    <img src="assets/images/clients(4).png" alt="">
+                </div>
+            </div>
+            <div class="item client-content">
+                <div class="client-item">
+                    <img src="assets/images/clients(5).png" alt="">
+                </div>
+            </div>
+            <div class="item client-content">
+                <div class="client-item">
+                    <img src="assets/images/clients(1).png" alt="">
+                </div>
+            </div>
+            <div class="item client-content">
+                <div class="client-item">
+                    <img src="assets/images/clients(2).png" alt="">
+                </div>
+            </div>
         </div><!-- owl-carousel end    -->
     </div><!--   container end    -->
 </section><!--  client section end    -->
 <section class="great"><!--  great section start    -->
     <div class="container"><!--   container start    -->
-        <div class="great-info wow bounceInUp"><!--   great-info start    -->
+        <div class="great-info wow fadeInDown" data-wow-delay="1s"><!--   great-info start    -->
             <div class="great-icon"><!--   great-icon start    -->
                 <i class="fa fa-users" aria-hidden="true"></i>
             </div><!--   great-icon end    -->
@@ -451,19 +496,19 @@
         </div><!--   great-info end    -->
     </div><!--   container end    -->
 </section><!--  great section end    -->
-<section class="blog"><!--  blog section start    -->
+<section class="blog" id="blog"><!--  blog section start    -->
     <div class="container"><!--   container start    -->
-        <div class="section-heading"><!--   section-heading start    -->
-          <h5 class="wow bounceInDown" data-wow-delay="1s">our news &amp; articles</h5>
-          <h1 class="wow bounceInRight" data-wow-delay="2s">Latest blog posts</h1>
+        <div class="section-heading wow fadeInDown" data-wow-delay="1s"><!--   section-heading start    -->
+          <h5>our news &amp; articles</h5>
+          <h1>Latest blog posts</h1>
           <div class="section-paragrap">
-            <p class="wow bounceInLeft" data-wow-delay="1s">We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
+            <p>We are committed to providing our customers with exceptional service while offering our employees the best training.</p>
           </div>
         </div><!--   section-heading end    -->
-        <div class="blog-flex wow rotateIn"><!--   blog-flex start    -->
+        <div class="blog-flex wow fadeInDown" data-wow-delay="1s"><!--   blog-flex start    -->
             <div class="blog-item bl-it-1"><!--   blog-item start    -->
                 <div class="blog-img">
-                    <img src="assets/images/post.png" alt="">
+                    <img src="assets/images/3.jpg" alt="">
                 </div>
                 <div class="blog-details">
                     <div class="blog-date">
@@ -477,7 +522,7 @@
             </div><!--   blog-item end    -->
             <div class="blog-item bl-it-1"><!--   blog-item start    -->
                 <div class="blog-img">
-                    <img src="assets/images/post.png" alt="">
+                    <img src="assets/images/4.jpg" alt="">
                 </div>
                 <div class="blog-details">
                     <div class="blog-date">
@@ -491,7 +536,7 @@
             </div><!--   blog-item end    -->
             <div class="blog-item"><!--   blog-item star    -->
                 <div class="blog-img">
-                    <img src="assets/images/post.png" alt="">
+                    <img src="assets/images/5.jpg" alt="">
                 </div>
                 <div class="blog-details">
                     <div class="blog-date">
@@ -506,13 +551,13 @@
         </div><!--   blog-flex end    -->
     </div><!--   container end    -->
 </section><!--  blog section end    -->
-<section class="project"><!--  project section start    -->
+<section class="project" id="contact"><!--  project section start    -->
     <div class="container"><!--   container start    -->
         <div class="project-flex"><!--   project-flex start    -->
-            <div class="project-left wow fadeInLeftBig">
+            <div class="project-left wow fadeInLeft" data-wow-delay="1s">
                 <h1>Let's Get Your Project Started!</h1>
             </div>
-            <div class="project-right wow fadeInRightBig">
+            <div class="project-right wow fadeInRight" data-wow-delay="1s">
                 <button type="" name="button"> <a href="#">Contact with us</a> </button>
             </div>
         </div><!--   project-flex end    -->
@@ -521,13 +566,13 @@
 <footer class="footer"><!--  footer section start    -->
     <div class="container"><!--   container start    -->
         <div class="footer-flex"><!--   footer-flex start    -->
-            <div class="footer-left wow bounceInLeft"><!--  footer-left star    -->
+            <div class="footer-left wow fadeInLeft" data-wow-delay="1s"><!--  footer-left star    -->
                 <div class="footer-left-item"><!--  footer-left-item start    -->
                     <img src="assets/images/logo.png" alt="Logo">
                     <p>Welcome to our web design agency. Lorem ipsum is simply free text dolor sit amet consectetur adipisicing elit. Tempore corrupti temporibus fuga earum asperiores, alias excepturi sit mpedit fugit laudantium.</p>
                 </div><!--  footer-left-item end    -->
             </div><!--  footer-left end    -->
-            <div class="footer-mid wow bounceInDown"><!--  footer-mid start    -->
+            <div class="footer-mid wow fadeInDown" data-wow-delay="1s"><!--  footer-mid start    -->
                 <div class="footer-mid-item"><!--  footer-mid-item start    -->
                     <h2>Contact</h2>
                     <p>66 Broklyn Street, New York 
@@ -536,7 +581,7 @@
                     <p>E: needhelp@meipaly.com</p>
                 </div><!--  footer-mid-item end    -->
             </div><!--  footer-mid end    -->
-            <div class="footer-right wow bounceInRight"><!--  footer-right start    -->
+            <div class="footer-right wow fadeInRight" data-wow-delay="1s"><!--  footer-right start    -->
                 <div class="footer-right-item"><!--  footer-right-item start    -->
                    <h2>Social</h2>
                     <nav class="footer-icon">
@@ -550,7 +595,7 @@
             </div><!--  footer-left end    -->
         </div><!--   footer-flex end    -->
     </div><!--   container end    -->
-    <div class="footer-down wow bounceInUp">
+    <div class="footer-down wow fadeInDown" data-wow-delay="1s">
         <p>&copy; copyright 2018 by Layerdrops.com</p>
     </div>
 </footer><!--  footer section end    -->
@@ -568,6 +613,12 @@
 	<script src="assets/js/wow.min.js"></script>
     <script src="js/wow.min.js"></script>
               <script>
+                wow = new WOW(
+                    {
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
                 new WOW().init();
               </script>
    
@@ -579,26 +630,29 @@
             nav:false,
             responsive:{
                 0:{
-                    items:1
+                    items:0
                 },
                 320:{
+                    items:1
+                },
+                500:{
                     items:2
                 },
-                480:{
-                    items:2
-                },
-                600:{
+                769:{
                     items:3
                 },
                 
-                768:{
+                1020:{
                     items:4
-                },
-                1000:{
+                }
+                ,
+                1320:{
                     items:5
                 }
             }
         })
+    </script>
+    <script>
 	   <!--	clients carousel js-->
         
             $('.client-carousel').owlCarousel({
@@ -606,30 +660,25 @@
             margin:10,
             responsive:{
                 0:{
-                    items:1
+                    items:0
                 },
                 320:{
                     items:1
                 },
-                480:{
+                430:{
                     items:2
                 },
-                600:{
-                    items:2
-                },
-                601:{
-                    items:2
-                },
-                700:{
+                650:{
                     items:3
                 },
-                1000:{
+                900:{
                     items:4
-                }
+                },
             }
         })
         <!--	banner carousel js-->
-        
+    </script>
+       <script>
         $('.banner-carousel').owlCarousel({
             loop:true,
             margin:10,
@@ -640,15 +689,7 @@
                 0:{
                     items:1
                 },
-                600:{
-                    items:1
-                },
-                601:{
-                    items:1
-                },
-                906:{
-                    items:1
-                },
+                
                 1000:{
                     items:1
                 }
@@ -690,5 +731,37 @@
 
         });
   </script>
+<!--  Search box work -->
+  <script>
+$(document).ready(function(){
+  $(".search").click(function(){
+    $(".header-search").toggleClass("search-show");
+  });
+});
+</script>
+<!-- Toogle Menu bar work -->
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+<!--Active link -->
+<script>
+    $( '#topheader .singel-header a' ).on( 'click', function () {
+	$( '#topheader .singel-header' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
+    });
+</script>
+<!-- Toggle Active Class-->
+<script>
+    $( '#myNav .toggle-nav a' ).on( 'click', function () {
+	$( '#myNav .toggle-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
+    });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
